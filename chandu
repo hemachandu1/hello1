@@ -1,0 +1,123 @@
+Last login: Wed Nov  2 15:55:41 2022 from ec2-3-16-146-3.us-east-2.compute.amazonaws.com
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-27-190 ~]$ sudo yum update -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+No packages marked for update
+[ec2-user@ip-172-31-27-190 ~]$ sudo -i
+[root@ip-172-31-27-190 ~]# yum install git -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Resolving Dependencies
+--> Running transaction check
+---> Package git.x86_64 0:2.37.1-1.amzn2.0.1 will be installed
+--> Processing Dependency: perl-Git = 2.37.1-1.amzn2.0.1 for package: git-2.37.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: git-core-doc = 2.37.1-1.amzn2.0.1 for package: git-2.37.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: git-core = 2.37.1-1.amzn2.0.1 for package: git-2.37.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-2.37.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl(Git::I18N) for package: git-2.37.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl(Git) for package: git-2.37.1-1.amzn2.0.1.x86_64
+--> Running transaction check
+---> Package git-core.x86_64 0:2.37.1-1.amzn2.0.1 will be installed
+---> Package git-core-doc.noarch 0:2.37.1-1.amzn2.0.1 will be installed
+---> Package perl-Git.noarch 0:2.37.1-1.amzn2.0.1 will be installed
+--> Processing Dependency: perl(Error) for package: perl-Git-2.37.1-1.amzn2.0.1.noarch
+---> Package perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2 will be installed
+--> Running transaction check
+---> Package perl-Error.noarch 1:0.17020-2.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===================================================================================================================================================================================================================
+ Package                                               Arch                                        Version                                                   Repository                                       Size
+===================================================================================================================================================================================================================
+Installing:
+ git                                                   x86_64                                      2.37.1-1.amzn2.0.1                                        amzn2-core                                       71 k
+Installing for dependencies:
+ git-core                                              x86_64                                      2.37.1-1.amzn2.0.1                                        amzn2-core                                      6.4 M
+ git-core-doc                                          noarch                                      2.37.1-1.amzn2.0.1                                        amzn2-core                                      2.8 M
+ perl-Error                                            noarch                                      1:0.17020-2.amzn2                                         amzn2-core                                       32 k
+ perl-Git                                              noarch                                      2.37.1-1.amzn2.0.1                                        amzn2-core                                       46 k
+ perl-TermReadKey                                      x86_64                                      2.30-20.amzn2.0.2                                         amzn2-core                                       31 k
+
+Transaction Summary
+===================================================================================================================================================================================================================
+Install  1 Package (+5 Dependent packages)
+
+Total download size: 9.3 M
+Installed size: 40 M
+Downloading packages:
+(1/6): git-2.37.1-1.amzn2.0.1.x86_64.rpm                                                                                                                                                    |  71 kB  00:00:00     
+(2/6): git-core-doc-2.37.1-1.amzn2.0.1.noarch.rpm                                                                                                                                           | 2.8 MB  00:00:00     
+(3/6): git-core-2.37.1-1.amzn2.0.1.x86_64.rpm                                                                                                                                               | 6.4 MB  00:00:00     
+(4/6): perl-Error-0.17020-2.amzn2.noarch.rpm                                                                                                                                                |  32 kB  00:00:00     
+(5/6): perl-TermReadKey-2.30-20.amzn2.0.2.x86_64.rpm                                                                                                                                        |  31 kB  00:00:00     
+(6/6): perl-Git-2.37.1-1.amzn2.0.1.noarch.rpm                                                                                                                                               |  46 kB  00:00:00     
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                               36 MB/s | 9.3 MB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : git-core-2.37.1-1.amzn2.0.1.x86_64                                                                                                                                                              1/6 
+  Installing : git-core-doc-2.37.1-1.amzn2.0.1.noarch                                                                                                                                                          2/6 
+  Installing : 1:perl-Error-0.17020-2.amzn2.noarch                                                                                                                                                             3/6 
+  Installing : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64                                                                                                                                                       4/6 
+  Installing : perl-Git-2.37.1-1.amzn2.0.1.noarch                                                                                                                                                              5/6 
+  Installing : git-2.37.1-1.amzn2.0.1.x86_64                                                                                                                                                                   6/6 
+  Verifying  : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64                                                                                                                                                       1/6 
+  Verifying  : git-core-doc-2.37.1-1.amzn2.0.1.noarch                                                                                                                                                          2/6 
+  Verifying  : perl-Git-2.37.1-1.amzn2.0.1.noarch                                                                                                                                                              3/6 
+  Verifying  : git-2.37.1-1.amzn2.0.1.x86_64                                                                                                                                                                   4/6 
+  Verifying  : git-core-2.37.1-1.amzn2.0.1.x86_64                                                                                                                                                              5/6 
+  Verifying  : 1:perl-Error-0.17020-2.amzn2.noarch                                                                                                                                                             6/6 
+
+Installed:
+  git.x86_64 0:2.37.1-1.amzn2.0.1                                                                                                                                                                                  
+
+Dependency Installed:
+  git-core.x86_64 0:2.37.1-1.amzn2.0.1    git-core-doc.noarch 0:2.37.1-1.amzn2.0.1    perl-Error.noarch 1:0.17020-2.amzn2    perl-Git.noarch 0:2.37.1-1.amzn2.0.1    perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2   
+
+Complete!
+[root@ip-172-31-27-190 ~]# mkdir project
+[root@ip-172-31-27-190 ~]# cd project
+[root@ip-172-31-27-190 project]# git init .
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /root/project/.git/
+[root@ip-172-31-27-190 project]# touch f1 f2 f3
+[root@ip-172-31-27-190 project]# git add *
+[root@ip-172-31-27-190 project]# git commit -m "first commits" *
+[master (root-commit) b4a2f9a] first commits
+ Committer: root <root@ip-172-31-27-190.us-east-2.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 f1
+ create mode 100644 f2
+ create mode 100644 f3
+[root@ip-172-31-27-190 project]# git remote add origin https://github.com/hemachandu1/hello1.git
+[root@ip-172-31-27-190 project]# git push origin master
+Username for 'https://github.com': hemachandu1
